@@ -15,3 +15,5 @@
 ## Avance de desarrollo
 - Si bien el juego es funcional, se encuentra en un estado de desarrollo para mejoras de estilos, lógica del juego. Es un juego que se puede escalar.
 
+## Link
+- Puedes ver el diseño del Juego en este link https://jhonniergs.github.io/rock-figthers/ pero no tendras acceso a las batallas ya que tiene que arrancar desde un servidor (se encuentra en desarrollo)
