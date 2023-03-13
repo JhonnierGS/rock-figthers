@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Rock 'n' Roll</title>
+</head>
+<body>
+
+  <section id="alertChapter" class="alert__chapter_container">
+    <div class="alert__chapter_content">
+      <div>
+        <h2>¡¡Debes seleccionar un personaje!!</h2>
+      </div>
+      <div class="tarjeta_zombieFail"></div>
+      <button id="closeAlert" class="button_Alert">Entendido</button>
+    </div>
+  </section>
+
+  <section id="viewMap">
+    <h1 class="titulo">Recorre el mapa con tu personaje</h1>
+    <canvas id="mapa"></canvas>
+
+    <section class="move_content">
+      <div>
+        <button class="button__atack" onmouseup="detenerMovimiento()" onmousedown="moverArriba()">arriba</button>
+      </div>
+      <div class="container_butonsMove">
+        <button class="button__atack" onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">Izquierda</button>
+        <button class="button__atack" onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">abajo</button>
+        <button class="button__atack" onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">derecha</button>
+      </div>
+    </section>
+  </section>
+
+  <section id="selectPet">
+    <h1 class="titulo">Rock Fighters</h1>
+
+    <h2 class="subTitulo">Elige a Tu Personaje:</h2>
+
+
+    <div id="contenedorTarjetas" class="tajetas">
+      <!--Terjetas de luchadores-->
+    </div>
+
+
+    <button id="button_selectPet" class="button_selectPet">Seleccionar</button>
+  </section>
+
+  <section id="selectAtack">
+    <h1 class="titulo">Rock Fighters</h1>
+    <h2 class="subTitulo">Elige tu ataque:</h2>
+    <div class="container__vs">
+      <div class="card__container">
+        <label id="namePlayerSelcted" class="">
+        </label>
+      </div>
+      <div>
+        <img width="160px" height="160px" src="./assets/img/vs.png" alt="">
+      </div>
+      <div class="card__container">
+        <label id="nameEnemySelcted" class="card__revers">
+        </label>
+      </div>
+    </div>
+
+    <div class="container__life">
+      <p class="text__life"><span id="namePetPlayer"></span></p>
+      <p class="text__life"><span id="namePetEnemy"></span></p>
+    </div>
+
+    <div id="containerAtacks" class="container__buttons_atack">
+      <!--bonotes ataques-->
+    </div>
+
+    <div>
+      <section class="container_massages" id="messages">
+        <div class="content_ponit">
+          <p id="pointsPlayer">0</p>
+          <p id="poinstEnemy">0</p>
+        </div>
+        <p class="" id="result"></p>
+      </section>
+    </div>
+    
+    <div class="container_atacks">
+      <div class="text_atack" id="atack-of-player"></div>
+      <div class="text_atack" id="atack-of-enemy"></div>
+    </div>
+  </section>
+
+  <section id="ModalFinalResults" class="alert__chapter_container">
+    <div class="alert__chapter_content">
+      <div class="text_atack" id="textModelFinal">
+
+      </div>
+      <section id="reset">
+        <button class="button_Alert" id="button_reset">Reiniciar</button>
+      </section>
+    </div>
+  </section>
+  <script src="./js/mokepon.js"></script>
+</body>
+</html>

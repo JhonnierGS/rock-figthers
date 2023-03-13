@@ -1,0 +1,549 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --color-primero: #2A0944;
+  --color-segundo: #3B185F;
+  --color-tercero: #A12568;
+  --color-cuarto: #FEC260;
+
+}
+
+body{
+  position: relative;
+  font-family: 'Rock Salt', cursive;
+  background-color: var(--color-primero);
+}
+
+/* alerta de advertencia */
+.alert__chapter_container{
+  width: 50%;
+  height: 430px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background: white;
+  z-index: 1000;
+  display: none;
+  animation:jello-horizontal .9s linear both;
+  background: var(--color-tercero);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+@keyframes jello-horizontal{
+  0%{
+    transform:scale3d(1,1,1)
+  }
+  30%{
+    transform:scale3d(1.25,.75,1)
+  }
+  40%{
+    transform:scale3d(.75,1.25,1)
+  }
+  50%{
+    transform:scale3d(1.15,.85,1)
+  }
+  65%{
+    transform:scale3d(.95,1.05,1)
+  }
+  75%{
+    transform:scale3d(1.05,.95,1)
+  }
+  100%{
+    transform:scale3d(1,1,1)
+  }
+}
+
+.alert__chapter_content{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.tarjeta_zombieFail{
+  position: relative;
+  width: 170px;
+  height: 156px;
+  padding: 10px;
+  background-image: url('./assets/img/zombieFail.png');
+  background-repeat: repeat-x;
+  background-position: -1870px;
+  box-sizing: border-box;
+  margin: 10px;
+  /* border: 1px solid hotpink; */
+  animation: zombieFile 1.3s steps(12) 1;
+  cursor: pointer;
+}
+
+@keyframes zombieFile {
+  0%{
+    background-position: 0;
+  }
+  100%{
+    background-position: -2040px;
+  }
+}
+
+.button_Alert{
+  width: 180px;
+  height: 40px;
+  border-radius: 20px;
+  background: transparent;
+  border: 1px solid white;
+  outline: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  margin: 40px 0 0 0;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.button_Alert:hover{
+  background: var(--color-cuarto);
+}
+
+
+/* seccion inicio del juego */
+#selectPet{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin-top: 80px;
+}
+
+.titulo{
+  color: white;
+  font-size: 32px;
+}
+
+.subTitulo{
+  color: white;
+  font-size: 24px;
+  margin: 40px 0 0 0;
+}
+
+.tajetas{
+  display: flex;
+  gap: 20px;
+  margin: 40px 0 0 0;
+}
+
+[type="radio"]{
+  display: none;
+}
+
+
+.card__container{
+  width: 230px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-segundo);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+
+.card__container:hover{
+  background: var(--color-tercero);
+}
+
+
+.tarjeta_de_pumkimStop{
+  position: relative;
+  width: 118px;
+  height: 156px;
+  padding: 10px;
+  background-image: url('./assets/img/pumkimStid.png');
+  background-repeat: repeat-x;
+  box-sizing: border-box;
+  margin: 10px;
+  /* border: 1px solid hotpink; */
+  animation: stop .8s steps(10) infinite;
+  cursor: pointer;
+}
+
+.tarjeta_de_pumkimStop p{
+  position: absolute;
+  left: 30px;
+  top: 15px;
+  width: 100%;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  color: white;
+  font-size: 18px;
+}
+
+
+@keyframes stop {
+  0%{
+    background-position: 0;
+  }
+  100%{
+    background-position: -1188px;
+  }
+}
+
+.tarjeta_de_pumkimRun{
+  position: relative;
+  width: 115px;
+  height: 156px;
+  padding: 10px;
+  background-image: url('./assets/img/pumpkimRun.png');
+  background-repeat: repeat-x;
+  box-sizing: border-box;
+  margin: 10px;
+  /* border: 1px solid hotpink; */
+  animation: pumpkimRun .6s steps(8) infinite;
+  cursor: pointer;
+}
+
+.tarjeta_de_pumkimRun p{
+  position: absolute;
+  left: 30px;
+  top: 15px;
+  width: 100%;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  color: white;
+  font-size: 18px;
+}
+
+@keyframes pumpkimRun {
+  0%{
+    background-position: 0;
+  }
+  100%{
+    background-position: -944px;
+  }
+}
+
+.tarjeta_de_rexStop{
+  position: relative;
+  width: 225px;
+  height: 156px;
+  padding: 10px;
+  background-image: url('./assets/img/rexStop.png');
+  background-repeat: repeat-x;
+  box-sizing: border-box;
+  margin: 10px;
+  /* border: 1px solid hotpink; */
+  animation: rexStop 1s steps(10) infinite;
+  cursor: pointer;
+}
+
+.tarjeta_de_rexName{
+  position: absolute;
+  left: -15px;
+  top: 20px;
+  width: 100%;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  color: white;
+  font-size: 18px;
+}
+
+@keyframes rexStop {
+  0%{
+    background-position: 0;
+  }
+  100%{
+    background-position: -2250px;
+  }
+}
+
+.tarjeta_de_rexRun{
+  position: relative;
+  width: 225px;
+  height: 156px;
+  padding: 10px;
+  background-image: url('./assets/img/rexRun.png');
+  background-repeat: repeat-x;
+  box-sizing: border-box;
+  margin: 10px;
+  /* border: 1px solid hotpink; */
+  animation: rexRun .7s steps(8) infinite;
+  cursor: pointer;
+}
+
+@keyframes rexRun{
+  0%{
+    background-position: 0;
+  }
+  100%{
+    background-position: -1800px;
+  }
+}
+
+
+.tarjeta_de_ninjaGirlStop{
+  position: relative;
+  width: 89.3px;
+  height: 156px;
+  padding: 10px;
+  background-image: url('./assets/img/ninjaGirlStop.png');
+  background-repeat: repeat-x;
+  box-sizing: border-box;
+  margin: 10px;
+  animation: ninjaGirlStop 1s steps(10) infinite;
+  cursor: pointer;
+}
+
+
+.tarjeta_de_ninjaGirlName{
+  position: absolute;
+  left: 50px;
+  top: 20px;
+  width: 100%;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  color: white;
+  font-size: 18px;
+}
+
+@keyframes ninjaGirlStop {
+  0%{
+    background-position: 0;
+  }
+  100%{
+    background-position: -890px;
+  }
+}
+
+.tarjeta_de_ninjaGirlRun{
+  position: relative;
+  width: 113px;
+  height: 156px;
+  padding: 10px;
+  background-image: url('./assets/img/ninjaGirlRun.png');
+  background-repeat: repeat-x;
+  box-sizing: border-box;
+  margin: 10px;
+  animation: ninjaGirlRun .5s steps(10) infinite;
+  cursor: pointer;
+}
+
+@keyframes ninjaGirlRun {
+  0%{
+    background-position: 0;
+  }
+  100%{
+    background-position: -1130px;
+  }
+}
+
+.button_selectPet{
+  width: 180px;
+  height: 40px;
+  border-radius: 20px;
+  background: transparent;
+  border: 1px solid white;
+  outline: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  margin: 40px 0 0 0;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.button_selectPet:hover{
+  background: var(--color-segundo);
+}
+
+.move_content{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.container_butonsMove{
+  display: flex;
+  gap: 20px;
+}
+
+#selectAtack{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__life{
+  /* width: 40%; */
+  display: flex;
+  gap: 180px;
+}
+
+.container__buttons_atack{
+  margin-top: 24px;
+}
+
+.text__life{
+  color: white;
+  font-size: 18px;
+  margin: 24px 0 0 0;
+}
+
+.button__atack{
+  width: 130px;
+  padding: 10px;
+  border-radius: 20px;
+  background: transparent;
+  border: 1px solid white;
+  outline: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.button__atack:hover{
+  background: var(--color-segundo);
+}
+
+.container__vs{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.card__revers{
+  transform: scaleX(-1);
+}
+
+.container_massages{
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.content_ponit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 110px;
+  background-color: #A12568;
+  border-radius: 15px;
+}
+
+.container_massages p{
+  color: white;
+}
+
+
+.rotate-center{
+  color: white;
+  font-size: 24px;
+  margin: 24px 0 0 0;
+  animation:rotate-center 0.4s
+}
+
+@keyframes rotate-center{
+  0%{
+    transform:rotate(0)
+  }
+  100%{
+    transform:rotate(360deg)
+  }
+}
+
+.rotate-scale-up{
+  color: white;
+  font-size: 24px;
+  margin: 24px 0 0 0;
+  animation:rotate-scale-up 0.4s linear both
+}
+
+@keyframes rotate-scale-up{0%{transform:scale(1) rotateZ(0)}50%{transform:scale(2) rotateZ(180deg)}100%{transform:scale(1) rotateZ(360deg)}}
+
+.shake-horizontal{
+  color: white;
+  font-size: 24px;
+  margin: 24px 0 0 0;
+  animation:shake-horizontal 0.8s linear both
+}
+
+@keyframes shake-horizontal{0%,100%{transform:translateX(0)}10%,30%,50%,70%{transform:translateX(-10px)}20%,40%,60%{transform:translateX(10px)}80%{transform:translateX(8px)}90%{transform:translateX(-8px)}}
+
+.container_atacks{
+  display: flex;
+  gap: 80px;
+  margin-bottom: 10px;
+}
+
+.text_atack{
+  color: white;
+  font-size: 32px;
+  margin: 14px 0 0 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #A12568;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+
+
+#viewMap{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#mapa{
+  border: 2px solid #FEC260;
+}
+
+/* media queris */
+
+@media (max-width: 900px){
+
+  .tajetas{
+    flex-direction: column;
+  }
+
+  .container__vs{
+    flex-direction: column;
+  }
+
+  .container__life{
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .container__buttons_atack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .container_atacks {
+    flex-direction: column;
+  }
+
+}
